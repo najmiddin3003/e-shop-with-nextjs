@@ -1,4 +1,4 @@
-import CustomImage from "@/components/image";
+import CustomImage from "@/components/image-component";
 import { notFound } from "next/navigation";
 import React from "react";
 

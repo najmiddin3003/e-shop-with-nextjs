@@ -1,6 +1,6 @@
 "use client";
 
-import CustomImage from "@/components/image";
+import CustomImage from "@/components/image-component";
 import { StarIcon as StarIconOutline } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";

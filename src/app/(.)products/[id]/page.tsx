@@ -4,7 +4,7 @@ import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { ProductType } from "../../../../interfaces";
 import { Dialog } from "@headlessui/react";
-import CustomImage from "@/components/image";
+import CustomImage from "@/components/image-component";
 import ReactStars from "react-stars";
 import { toast } from "react-toastify";
 

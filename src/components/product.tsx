@@ -2,12 +2,10 @@
 
 import React, { FC } from "react";
 import { ProductType } from "../../interfaces";
-import Image from "next/image";
 import Link from "next/link";
-import CustomImage from "./image";
+import CustomImage from "./image-component";
 
 const Product: FC<{ product: ProductType }> = ({ product }) => {
-  console.log(product);
 
   return (
     <div className="">
