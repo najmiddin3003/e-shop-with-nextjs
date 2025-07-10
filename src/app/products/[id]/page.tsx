@@ -2,16 +2,20 @@ import CustomImage from "@/components/image-component";
 import { notFound } from "next/navigation";
 import React from "react";
 
-interface Props {
+// Bu yerda Props emas, bevosita PageProps tipidagi parametrni ishlatamiz
+interface PageProps {
   params: {
     id: string;
   };
 }
 
-const page = async ({ params: { id } }: Props) => {
+const page = async ({ params: { id } }: PageProps) => {
   try {
     const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    if (!res.ok) throw new Error("Product not found");
+    
     const product = await res.json();
+
     return (
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4 mt-48 pb-10">
         <CustomImage product={product} />
@@ -31,8 +35,9 @@ const page = async ({ params: { id } }: Props) => {
       </div>
     );
   } catch (error) {
-    console.log(error);
+    console.error(error);
     notFound();
   }
 };
+
 export default page;
